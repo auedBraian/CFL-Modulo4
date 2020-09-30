@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Concesionaria</title>
+</head>
+<body>
+    <h1>Concesionaria de autos y camionetas</h1>
+    <h2>Cargue datos del vehiculo</h2>
+    <form class="form">
+    Marca<input type="text" name="marca" id="marca">
+    Patente<input type="text" name="patente" id="patente">
+    Modelo<input type="text" name="modelo" id="modelo">
+    Año<input type="number" name="anio" id="anio">
+    Precio<input type="number" name="precio" id="precio">
+    <p>Si es un auto complete el siguiente campo</p>
+    <input type="number" name="capBaul" id="capBaul">Capacidad del baul en litros
+    <button id="crearAuto">Guardar Auto</button>
+    <p>Si es camioneta complete el siguiente campo</p>
+    <input type="number" name="capCaja" id="capCaja">Capacidad de carga en kilos
+    <button id="crearCamioneta">Guardar Camioneta</button>
+    </form>
+
+    <table class="table .thead-light" >
+        <thead>
+            <td scope="col">Tipo</td>
+            <td scope="col">Marca</td>
+            <td scope="col">Patente</td>
+            <td scope="col">Modelo</td>
+            <td scope="col">Año</td>
+            <td scope="col">Precio</td>
+            <td scope="col">Capacidad</td>
+        </thead>
+        <tbody id="lista"></tbody>
+    </table>
+
+    <button id="limpiarTabla">Limpiar Tabla</button>
+    <button id="verTodo">Ver Todo</button>
+        <button id="filtrarCamionetas">Filtrar Camionetas</button>
+    <button id="filtrarAutos">Filtrar Autos</button>
+    <h3 id="use-ajax"></h3>
+
+    <script src="./concesionaria/js/concesionaria.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
