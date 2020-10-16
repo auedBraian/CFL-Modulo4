@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ConcesionariaService } from './concesionaria.service';
 import { Vehiculo } from './vehiculo';
 
@@ -11,6 +11,13 @@ export class ConcesionariaController {
     public getVehiculos(): Vehiculo[] {
         return this.concesionariaService.getVehiculos();
     }
+
+    /*
+    @Get(':index')
+    public getVehiculo(@Param('index') index): Vehiculo {
+        return this.concesionariaService.getVehiculo(parseInt(index));
+    }
+*/
 
     @Post()
     create(@Body() vehiculo: any): string {

@@ -7,11 +7,12 @@ import * as fs from 'fs';
 @Injectable()
 export class ConcesionariaService {
     private listaVehiculos: Vehiculo[];
-    
+
     public getVehiculos(): any {
         this.listaVehiculos = this.loadVehiculos();
         return this.listaVehiculos;
     }
+
 
     public createAuto(vehiculo: any): string {
         let nuevoVehiculo = new Auto(vehiculo.marca, vehiculo.patente, vehiculo.modelo, vehiculo.anio, vehiculo.precio, vehiculo.capacidad);
@@ -55,7 +56,21 @@ export class ConcesionariaService {
                     this.listaVehiculos.push(nuevaCamioneta);
                 }
             }
-        }    
-            return this.listaVehiculos;
+        }
+        return this.listaVehiculos;
     }
+
+/*
+    public getVehiculo(index: number): Vehiculo {
+        this.listaVehiculos = this.loadVehiculos();
+        if (index < 0 || index >= this.listaVehiculos.length) {
+            return null;
+        }
+        console.log(this.listaVehiculos[index]);
+        return (this.listaVehiculos[index]);
+        
+    }
+*/
+
+
 }
