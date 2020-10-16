@@ -1,4 +1,3 @@
-
 let btnCrearAuto = document.querySelector("#crearAuto");
 btnCrearAuto.addEventListener("click", crearAuto);
 
@@ -178,5 +177,6 @@ function filtrarAutos(){
     }
     document.querySelector("#lista").innerHTML = html;
 }
+
 
 load();
